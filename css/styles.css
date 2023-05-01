@@ -1,10 +1,151 @@
 /* CUSTOM-PROPS */
 :root {
+  --white: #ffffff;
 
+  --black: #050505;
+  --black-lighter: #1f1f1f;
+  --black-lightest: #2d2d2d;
+
+  --gray: #3a3a3a;
+
+  --grey: #757575;
+  --grey-lighter: #e9e9e9;
+  --grey-lightest: #f4f4f4;
+  --grey-lightest: #f4f4f4;
+
+  --blue: #a445ed;
+  --red: #ff5252;
 }
 
-/* FONT-FACE  */
 
+/* FONT-FACE  */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+  url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"),
+  url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata-Regular.woff2") format("woff2"),
+  url("../fonts/Inconsolata-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/Inconsolata-Bold.woff2") format("woff2"),
+  url("../fonts/Inconsolata-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Regular.woff2") format("woff2"),
+  url("../fonts/Lora-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-Bold.woff2") format("woff2"),
+  url("../fonts/Lora-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/Lora-BoldItalic.woff2") format("woff2"),
+  url("../fonts/Lora-BoldItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+  url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* LOADER  */
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: var(--white);
+  transition: opacity 0.3s ease;
+}
+
+.loader-wrapper--none {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader, .loader:before, .loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+
+.loader {
+  color: var(--black);
+  font-size: 7px;
+  position: relative;
+  text-indent: -9999em;
+  transform: translateZ(0);
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3.5em;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}
+
+@keyframes bblFadInOut {
+  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+  40% { box-shadow: 0 2.5em 0 0 }
+}
 
 /* GLOBAL-STYLES  */
 html {
@@ -23,11 +164,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #fff;
-  color: #222;
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  background-color: var(--white);
+  color: var(--black);
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
   padding: 0;
   margin: 0;
 }
@@ -40,16 +181,16 @@ img {
 
 /* FOCUS-STYLES  */
 *:focus {
-  outline: 3px dashed var(black);
+  outline: 3px dashed var(--black);
   outline-offset: 3px;
 }
 
 /* CONTAINER  */
 .container {
-  max-width: 1200px;
+  max-width: 776px;
   width: 100%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,4 +212,168 @@ img {
 /* MAIN-CONTENT  */
 .main-content {
   flex-grow: 1;
+}
+
+
+/* SITE-LOGO  */
+.logo {
+  flex-shrink: 0;
+}
+
+.site-header__logo {
+  display: flex;
+  transition: opacity 0.2s ease;
+  margin-right: auto;
+}
+
+.site-header__logo:hover {
+  opacity: 0.8;
+}
+
+.site-header__logo:active {
+  opacity: 0.6;
+}
+
+.logo__img {
+  display: block;
+  width: 32px;
+  height: 36px;
+  object-fit: contain;
+}
+
+
+/* SITE-HEADER  */
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  padding-top: 58px;
+  padding-bottom: 26px;
+  position: relative;
+}
+
+.site-header__changer {
+  display: flex;
+  align-items: center;
+}
+
+.changer__font-selector {
+  padding-right: 26px;
+}
+
+.font-selector__button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  color: var(--black-lightest);
+}
+
+.selector__img {
+  display: block;
+  width: 12px;
+  height: 6px;
+  object-fit: contain;
+  margin-left: 17px;
+}
+
+.font-selector__list {
+  position: absolute;
+  top: 105px;
+  right: 133px;
+  width: 100%;
+  max-width: 183px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 24px;
+  list-style: none;
+  border-radius: 16px;
+  box-shadow: 0px 5px 30px 0px #0000001A;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+.font-selector__list--open {
+  transform: scale(1);
+}
+
+.font-selector__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.item__button {
+  padding: 0;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  border: none;
+  color: var(--black-lightest);
+  transition: color 0.2s ease;
+}
+
+.item__button:hover {
+  color: var(--blue);
+}
+
+.item__button--serif {
+  font-family: "Lora", "Arial", sans-serif;
+}
+
+.item__button--mono {
+  font-family: "Inconsolata", "Arial", sans-serif;
+}
+
+/* TOGGLER  */
+.changer__toggler {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 5px 26px;
+  border-left: 1px solid #e9e9e9;
+}
+
+.toggler__label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 40px;
+  height: 20px;
+  background: var(--grey);
+  display: block;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.toggler__label:hover {
+  background: var(--blue);
+}
+
+.toggler__label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.toggler__moon {
+  color: var(--grey);
+  transition: color 0.2s ease;
+  margin-left: 20px;
+}
+
+.toggler__input:checked + .toggler__label {
+  background: var(--blue);
+}
+
+.toggler__input:checked + .toggler__label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
 }

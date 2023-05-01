@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Name of Project</title>
+  <title class="js-title">Dictionary</title>
+
+  <!-- FAVICON  -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- STYLES  -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -13,6 +22,55 @@
 </head>
 <body>
 
+  <!-- LAODER  -->
+  <div class="loader-wrapper">
+    <span class="loader"></span>
+  </div>
+
+
+
+  <div class="container">
+    <!-- SITE-HEADER  -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <!-- SITE-LOGO -->
+        <a class="logo site-header__logo" href="index.html">
+          <img class="logo__img" src="img/logo.svg" width="32" height="37" alt="Site logo">
+        </a>
+        <!-- USER-INTERFACE-CHANGER  -->
+        <div class="site-header__changer changer">
+          <!-- FONT-CHANGER -->
+          <div class="font-selector changer__font-selector js-font-selector">
+            <button class="font-selector__button selector js-font-selector-main-button">
+              <span class="selector__text">Sans serif</span>
+              <img class="selector__img" src="img/arrow-down.svg" width="12" height="6" alt="Font selector">
+            </button>
+            <ul class="font-selector__list">
+              <li class="font-selector__item item">
+                <button class="item__button item__button--sans-serif js-font-selector-button" type="button">Sans serif</button>
+              </li>
+              <li class="font-selector__item item">
+                <button class="item__button item__button--serif js-font-selector-button" type="button">Serif</button>
+              </li>
+              <li class="font-selector__item item">
+                <button class="item__button item__button--mono js-font-selector-button" type="button">Mono</button>
+              </li>
+            </ul>
+          </div>
+          <!-- THEME-CHANGER  -->
+          <div class="changer__toggler toggler">
+            <div class="toggler__inner">
+              <input class="toggler__input visually-hidden" type="checkbox" id="toggler"/>
+              <label class="toggler__label" for="toggler">Toggle me</label>
+            </div>
+            <svg class="toggler__moon" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+  </div>
 
   <script src="js/main.js"></script>
 </body>
