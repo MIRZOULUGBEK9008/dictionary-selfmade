@@ -21,9 +21,8 @@
   <!-- <link rel="stylesheet" href="css/css.min.css"> -->
 </head>
 <body>
-
   <!-- LAODER  -->
-  <div class="loader-wrapper">
+  <div class="loader-wrapper js-loader">
     <span class="loader"></span>
   </div>
 
@@ -39,13 +38,14 @@
       </a>
       <!-- USER-INTERFACE-CHANGER  -->
       <div class="site-header__changer changer">
+
         <!-- FONT-CHANGER -->
         <div class="font-selector changer__font-selector js-font-selector">
           <button class="font-selector__button selector js-font-selector-main-button">
             <span class="selector__text">Sans serif</span>
             <img class="selector__img" src="img/arrow-down.svg" width="12" height="6" alt="Font selector">
           </button>
-          <ul class="font-selector__list">
+          <ul class="font-selector__list js-font-selector-list">
             <li class="font-selector__item item">
               <button class="item__button item__button--sans-serif js-font-selector-button" type="button">Sans serif</button>
             </li>
@@ -57,10 +57,11 @@
             </li>
           </ul>
         </div>
+
         <!-- THEME-CHANGER  -->
         <div class="changer__toggler toggler">
           <div class="toggler__inner">
-            <input class="toggler__input visually-hidden" type="checkbox" id="toggler">
+            <input class="toggler__input js-dark-mode-toggler visually-hidden" type="checkbox" id="toggler">
             <label class="toggler__label" for="toggler">Toggle me</label>
           </div>
           <svg class="toggler__moon" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M1 10.449a10.544 10.544 0 0 0 19.993 4.686C11.544 15.135 6.858 10.448 6.858 1A10.545 10.545 0 0 0 1 10.449Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -70,17 +71,18 @@
   </header>
 
 
-
-
+  <!-- * * * -->
   <!-- INDEX-FORM  -->
+  <!-- * * * -->
   <section class="index-form">
     <h2 class="visually-hidden">Search word that you want !</h2>
     <div class="index-form__container container">
-      <form class="index-form__search-form search-form" action="https://api.dictionaryapi.dev" method="GET">
+      <form class="index-form__search-form search-form js-search-form" action="https://api.dictionaryapi.dev" method="GET">
+
         <!-- SEARCH-FORM  -->
-        <div class="search-form__inner">
+        <div class="search-form__inner js-search-form-inner">
           <input
-          class="search-form__input"
+          class="search-form__input js-search-form-input"
           type="search"
           placeholder="Search for any word…"
           required
@@ -96,25 +98,27 @@
   <!-- * * * -->
   <!-- MAIN-CONTENT -->
   <!-- * * * -->
-  <main class="main-content">
+  <main class="main-content js-main-content">
     <div class="main-content__container content container">
+
       <!-- CONTENT-TOP  -->
       <section class="content__top top">
         <div class="top__inner">
           <h1 class="content__title">keyboard</h1>
           <p class="content__pronunciation">/ˈkiːbɔːd/</p>
         </div>
-        <button class="top__button play-button" type="button">
+        <button class="top__button play-button js-play-button" type="button">
           <span class="play-button__inner">
             <svg class="play-button__img" width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v21l21-10.5L0 0Z" fill="currentColor"/></svg>
           </span>
         </button>
       </section>
+
       <!-- CONTENT-NOUN  -->
       <section class="content__noun noun">
         <h2 class="noun__title title">noun</h2>
         <h3 class="noun__title-meaning small-title">Meaning</h3>
-        <ul class="noun__list">
+        <ul class="noun__list js-noun">
           <li class="noun__item item-noun marker-dote">
             <p class="item-noun__description">Далеко-далеко, за словесными.</p>
           </li>
@@ -123,26 +127,27 @@
           </li>
         </ul>
 
+        <!-- SYNONYMS-LIST  -->
         <div class="noun__synonyms synonyms">
           <h3 class="noun__title-synonym small-title">Synonyms</h3>
-          <ul class="synonyms__list">
+          <ul class="synonyms__list js-synonyms-list">
             <li class="synonyms__item item-synonyms">
-              <a class="item-synonyms__synonyms" href="#">Lorem, ipsum.</a>
+              <a class="item-synonyms__synonyms">Далеко-далеко.</a>
             </li>
             <li class="synonyms__item item-synonyms">
-              <a class="item-synonyms__synonyms" href="#">Lorem, ipsum dolor.</a>
+              <a class="item-synonyms__synonyms">Далеко-далеко.</a>
             </li>
             <li class="synonyms__item item-synonyms">
-              <a class="item-synonyms__synonyms" href="#">Lorem, ipsum dolor.</a>
+              <a class="item-synonyms__synonyms">Далеко-далеко.</a>
             </li>
             <li class="synonyms__item item-synonyms">
-              <a class="item-synonyms__synonyms" href="#">Lorem, ipsum dolor.</a>
+              <a class="item-synonyms__synonyms">Далеко-далеко.</a>
             </li>
             <li class="synonyms__item item-synonyms">
-              <a class="item-synonyms__synonyms" href="#">Lorem, ipsum dolor.</a>
+              <a class="item-synonyms__synonyms">Далеко-далеко.</a>
             </li>
             <li class="synonyms__item item-synonyms">
-              <a class="item-synonyms__synonyms" href="#">Lorem, ipsum dolor.</a>
+              <a class="item-synonyms__synonyms">Далеко-далеко.</a>
             </li>
           </ul>
         </div>
@@ -152,17 +157,17 @@
       <section class="content__verb verb">
         <h2 class="verb__title title">verb</h2>
         <h3 class="verb__small-title small-title">Meaning</h3>
-        <ul class="verb__list">
+        <ul class="verb__list js-verb">
           <li class="verb__item item-verb marker-dote">
             <div class="item-verb__inner">
-              <p class="item-verb__definition">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Безопасную, которое.</p>
-              <p class="item-verb__example">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit doloremque architecto ipsa quam!</p>
+              <p class="item-verb__definition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore mollitia dignissimos molestiae quam officiis fuga natus reiciendis, placeat at, iste corporis. Quae, asperiores aperiam?</p>
+              <p class="item-verb__example">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Путь повстречался пустился решила пор снова, своих рекламных строчка толку.</p>
             </div>
           </li>
           <li class="verb__item item-verb marker-dote">
             <div class="item-verb__inner">
-              <p class="item-verb__definition">Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Безопасную, которое.</p>
-              <p class="item-verb__example">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum libero perspiciatis consequatur laudantium!</p>
+              <p class="item-verb__definition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae labore mollitia dignissimos molestiae quam officiis fuga natus reiciendis, placeat at, iste corporis. Quae, asperiores aperiam?</p>
+              <p class="item-verb__example">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Путь повстречался пустился решила пор снова, своих рекламных строчка толку.</p>
             </div>
           </li>
         </ul>
@@ -178,27 +183,31 @@
     <div class="site-footer__container container source">
       <div class="source__inner">
         <span class="source__text">Source</span>
-        <a class="source__link" href="https://en.wiktionary.org/wiki/" target="_blank">https://en.wiktionary.org/wiki/<span></span></a>
+        <a class="source__link" href="https://en.wiktionary.org/wiki/" target="_blank">https://en.wiktionary.org/wiki/<span class="source__link-word js-link"></span></a>
       </div>
     </div>
   </footer>
 
 
+
   <!-- * * * -->
   <!-- TEMPLATES -->
   <!-- * * * -->
+
   <!-- DESCRIPTION  -->
   <template class="js-template-description">
     <li class="noun__item item-noun marker-dote">
       <p class="item-noun__description"></p>
     </li>
   </template>
+
   <!-- SYNONYMS  -->
   <template class="js-template-synonyms">
     <li class="synonyms__item item-synonyms">
       <a class="item-synonyms__synonyms" href="#"></a>
     </li>
   </template>
+
   <!-- VERB-DEFINITIONS  -->
   <template class="js-template-definitions">
     <li class="verb__item item-verb marker-dote">
